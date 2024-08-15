@@ -17,5 +17,5 @@ Métodos a serem implementados:
   Listagem - Lista todos os registros ativos da base aplicando filtros não obrigatórios por Título, Diretor, Gênero e Ano Lançamento.
  
  
-Pode utilizar a base de dados H2 por exemplo
+Utilizar a base de dados H2 por exemplo
 Os métodos serão expostos em formato REST
