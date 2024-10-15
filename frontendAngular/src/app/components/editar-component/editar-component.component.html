@@ -1,0 +1,41 @@
+<h2>Editar Filme</h2>
+
+<form (ngSubmit)="salvarEdicoes()">
+  <div *ngIf="filme">
+    <div class="form-field">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" [(ngModel)]="filme.titulo" name="titulo" disabled="">
+      </div>
+
+
+    
+    <div class="form-field">
+      <label for="diretor">Diretor:</label>
+      <input type="text" id="diretor" [(ngModel)]="filme.diretor" name="diretor" required>
+    </div>
+    <div class="form-field">
+      <label for="genero">Gênero:</label>
+      <input type="text" id="genero" [(ngModel)]="filme.genero" name="genero" required>
+    </div>
+    <div class="form-field">
+      <label for="sinopse">Sinopse:</label>
+      <textarea id="sinopse" [(ngModel)]="filme.sinopse" name="sinopse" required></textarea>
+    </div>
+    <div class="form-field">
+      <label for="dataLancamento">Data de Lançamento:</label>
+      <input type="date" id="dataLancamento" [(ngModel)]="filme.dataLancamento" name="dataLancamento" required>
+    </div>
+    
+    <button type="submit">Salvar</button>
+  </div>
+
+  <div *ngIf="mensagemErro" class="mensagem-erro">{{ mensagemErro }}</div>
+
+  <div *ngIf="mensagemSucesso" class="mensagem-sucesso">{{ mensagemSucesso }}</div>
+
+
+  
+</form>
+
+
+

@@ -1,0 +1,42 @@
+.container {
+    background-image: url('/assets/telafundo.jpg');
+    background-size: cover; 
+    background-position: center; 
+    color: red;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+  text-align: center;
+  font-size: 7rem; 
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+  .button-container {
+    margin-top: 00px;
+  }
+  
+  button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 20px 50px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 200px;
+    height: 60px;
+    text-align: center;
+  }
+  
+  button:hover {
+    background-color: white;
+  }

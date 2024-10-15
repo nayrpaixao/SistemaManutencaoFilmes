@@ -1,0 +1,56 @@
+<h2>Pesquisar Filmes</h2>
+
+<form (ngSubmit)="onFilter()" #filterForm="ngForm">
+  <div class="form-field">
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo" [(ngModel)]="searchParams.titulo" name="titulo">
+  </div>
+
+  <div class="form-field">
+    <label for="diretor">Diretor:</label>
+    <input type="text" id="diretor" [(ngModel)]="searchParams.diretor" name="diretor">
+  </div>
+
+  <div class="form-field">
+    <label for="genero">Gênero:</label>
+    <input type="text" id="genero" [(ngModel)]="searchParams.genero" name="genero">
+  </div>
+
+  <div class="form-field">
+    <label for="anoLancamento">Ano de Lançamento:</label>
+    <input type="number" id="anoLancamento" [(ngModel)]="searchParams.dataLancamento" name="anoLancamento" placeholder="Ano de Lançamento">
+  </div>
+
+  <button type="submit">Filtrar</button>
+</form>
+
+
+<div *ngIf="buscaRealizada">
+  <div *ngIf="filmes.length > 0; else noResults">
+    <div *ngFor="let filme of filmes" class="filme-card">
+    
+      <button (click)="confirmarExclusao(filme.id)" class="delete-button" matTooltip="Excluir Filme">
+        <mat-icon>delete</mat-icon>
+      </button>
+
+      
+      <button (click)="editarFilme(filme.id)" class="edit-button" matTooltip="Editar Filme">
+        <mat-icon>edit</mat-icon>
+      </button>
+
+      <p><strong class="cabecalho">Título:</strong> {{ filme.titulo }}</p>
+      <p><strong class="cabecalho">Diretor:</strong> {{ filme.diretor }}</p>
+      <p><strong class="cabecalho">Gênero:</strong> {{ filme.genero }}</p>
+      <p><strong class="cabecalho">Sinopse:</strong> {{ filme.sinopse }}</p>
+      <p><strong class="cabecalho">Ano de Lançamento:</strong> {{ filme.dataLancamento }}</p>
+    </div>
+  </div>
+
+ 
+  <ng-template #noResults>
+    <p class="no-results-message">{{ mensagemErro || 'Nenhum filme encontrado.' }}</p>
+  </ng-template>
+</div>
+
+
+<div *ngIf="loading">Carregando filmes...</div>

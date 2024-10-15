@@ -1,0 +1,58 @@
+button {
+  padding: 0 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: silver;
+  border: none;
+  text-align: center;
+  width: 400px;
+  height: 40px;
+}
+
+button:hover {
+  background-color: darkgray;
+}
+
+h2{
+    text-align: justify;
+    color: white;
+    font-size: 2rem; 
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+      
+  }
+
+    label{
+
+    color: white;  
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    width: 150px;
+    text-align: right;
+    display: block;
+    
+    }
+  
+  input[type="text"],
+  input[type="date"] {
+      color: black;
+      flex: 10;
+      padding: 10px;
+      font-size: 1.2rem;
+      width: 80%;
+      height: 30px;
+      box-sizing: border-box;
+      margin-bottom: 15px;
+    }
+
+     
+    .form-field {
+      display: flex;  
+      align-items: center;             
+      flex-direction: row;     
+      width: 90%;                 
+      margin-bottom: 15px;    
+
+    }

@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('/assets/telafundo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: red; 
+    text-align: center;
+    font: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

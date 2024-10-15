@@ -1,0 +1,27 @@
+<h2>Consultar Filmes por Tíulo</h2>
+
+<form (ngSubmit)="onSearch()" #searchForm="ngForm">
+  <div class="form-field">
+    <label for="titulo">Título:</label>
+    <input type="text" id="titulo" [(ngModel)]="searchParams.titulo" name="titulo" required>
+    <button type="submit">Buscar</button>
+  </div>
+</form>
+
+<div *ngIf="buscaRealizada">  
+  <div *ngIf="filmes.length > 0; else noResults">
+    <div *ngFor="let filme of filmes" class="filme-card">
+      <p><strong class="cabecalho">Título:</strong> {{ filme.titulo }}</p>
+      <p><strong class="cabecalho">Gênero:</strong> {{ filme.genero }}</p>
+      <p><strong class="cabecalho">Diretor:</strong> {{ filme.diretor }}</p>
+      <p><strong class="cabecalho">Sinopse:</strong> {{ filme.sinopse }}</p>  
+      <p><strong class="cabecalho">Data de Lançamento:</strong> {{ filme.dataLancamento }}</p>
+    </div>
+  </div>
+  
+  <ng-template #noResults>
+    <p class="no-results-message" >{{ mensagemErro || 'Nenhum filme encontrado.' }}</p>
+  </ng-template>
+</div>
+
+<div *ngIf="loading">Carregando filmes...</div>

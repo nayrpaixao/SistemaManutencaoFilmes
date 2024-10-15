@@ -1,0 +1,150 @@
+body, html {
+    margin: 0;
+    padding: 0;
+   
+  }
+  
+  h2 {
+    text-align: left;
+    color: white;
+    font-size: 2rem; 
+    margin-bottom: 20px;
+  }
+  
+  .cabecalho {
+    color: red;
+    font-weight: bold;
+  }
+  
+  p {
+    text-align: justify;
+    color: black;
+    font-size: 1rem; 
+    margin-bottom: 10px;
+  }
+  
+  label {
+    color: white;  
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    width: 150px;
+    display: inline-block;
+  }
+  
+  input[type="text"] {
+    color: black;
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 50%; 
+    height: 30px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+  }
+  
+  .form-field {
+    display: flex;  
+    align-items: center;             
+    justify-content: flex-start;     
+    width: 100%;                 
+    margin-bottom: 15px;    
+  }
+  
+  button {
+    padding: 0 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: silver;
+    border: none;
+    width: 300px;
+    height: 40px;
+    margin-left: 10px;
+  }
+  
+  button:hover {
+    background-color: darkgray;
+  }
+  
+ 
+  .mensagem-erro {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+ 
+  .loading {
+    color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
+  .filme-card {
+    position: relative;
+    background-color: #d9d1d1; 
+    padding: 10px; 
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+      }
+
+      .delete-button {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+        outline: none;
+    }
+    
+    .delete-button mat-icon {
+        width: 24px;
+        height: 24px;
+        pointer-events: none;
+    }
+    
+    
+    .delete-button:focus, .delete-button:hover {
+        outline: none;
+    }
+    
+    .delete-button:hover {
+        background: transparent;
+    }
+    
+    .edit-button {
+        position: absolute;
+        top: 40px;
+        right: 8px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        margin: 0;
+        outline: none;
+      }
+    
+      .edit-button mat-icon {
+        width: 24px;
+        height: 24px;
+        pointer-events: none;
+    }
+    
+    
+    .edit-button:focus, .edit-button:hover {
+        outline: none;
+    }
+    
+    .edit-button:hover {
+        background: transparent;
+    }
+         
+
+  .no-results-message {
+    color:white;
+   
+}
