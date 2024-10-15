@@ -10,22 +10,27 @@ import com.cinefilmes.user.exceptions.FilmNotFoundException;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
-	
+
 	@ExceptionHandler(FilmNotFoundException.class)
     public ResponseEntity<String> handleFilmNotFoundException(FilmNotFoundException e) {
         return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
-	
+
 	}
-	
+
 	@ExceptionHandler(DuplicateFilmException.class)
 	 public ResponseEntity<String> handleRuntimeException(RuntimeException e) {
 	        return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
 	    }
 
+	@ExceptionHandler(IllegalArgumentException.class)
+	public ResponseEntity<String> handleIllegalArgumentException(IllegalArgumentException e) {
+		return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+	}
+
 	 @ExceptionHandler(Exception.class)
 	    public ResponseEntity<String> handleException(Exception e) {
 	        return new ResponseEntity<>("Internal Server Error", HttpStatus.INTERNAL_SERVER_ERROR);
-	
+
 	 }
-	
+
 }
