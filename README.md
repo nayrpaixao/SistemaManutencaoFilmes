@@ -22,3 +22,12 @@ Métodos a serem implementados:
  
 Utilizar a base de dados H2 por exemplo
 Os métodos serão expostos em formato REST
+
+
+Frontend Angular - O frontend interage com o backend de manutenção de filmes, através de HTTP, enviando e resebendo dados em formato JSON e permitindo que os usuários realizem operações como buscar, criar, editar e excluir filmes de um banco de dados.
+Componentes: O projeto foi dividido em diferentes componentes, cada um responsável por uma parte da interface do usuário:
+Home: Tela principal com botões para acessar diferentes funcionalidades.
+Consultar: Permite consultar os filmes apenas por título.
+Criar: Formulário para adicionar novos filmes ao banco de dados.
+Editar: Permite editar informações de filmes existentes.
+Listar: Exibe uma lista de filmes ativos, que pode ser utilizados filtros como título, diretor, gênero e ano de lançamento e também pode fazer a exclusão lógica de um filme.
